@@ -4,7 +4,7 @@ var client = new Twitter(credentials);
 
 function favoriteUsersTweets() {
     client.get('statuses/user_timeline', {
-        user_id: 162821844
+        screen_name: "the_kaseys"
     }, function(e, r) {
         for (var i = 0; i < r.length; i++) {
             client.post('favorites/create/', {
